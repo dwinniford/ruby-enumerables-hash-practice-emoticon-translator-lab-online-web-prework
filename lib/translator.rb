@@ -20,7 +20,7 @@ def get_japanese_emoticon(file, english_emoticon)
   new_emoticons[:get_emoticon].find do |key, value|
     if english_emoticon == key
       return value 
-    end l
+    end 
   end 
 end
 
