@@ -26,7 +26,7 @@ end
 
 def get_english_meaning(file, japanese_emoticon)
   new_emoticons = load_library(file)
-  new_emoticons[:get_meaning].find do |key, value|
+  new_emoticons[:get_meaning].find(Proc.new {"Sorry, that emoticon was not found"}) do |key, value|
     if japanese_emoticon == key 
       return value 
     end 
