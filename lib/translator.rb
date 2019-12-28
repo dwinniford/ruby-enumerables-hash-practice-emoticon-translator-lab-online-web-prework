@@ -7,7 +7,7 @@ def load_library(file)
     :get_emoticon => {}
   }
   emoticons.each_with_object(new_emoticons) do |(meaning, emoticon_array), new_emoticons|
-  new_key = meaning[1]
+  new_key = emoticon_array[1]
   new_value = meaning 
   new_emoticons[:get_meaning][new_key] = new_value
   end 
