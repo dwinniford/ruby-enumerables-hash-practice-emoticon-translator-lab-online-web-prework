@@ -17,7 +17,7 @@ end
 
 def get_japanese_emoticon(file, english_emoticon)
   new_emoticons = load_library(file)
-  new_emoticons[:get_emoticon].find("Sorry, that emoticon was not found") do |key, value|
+  new_emoticons[:get_emoticon].find(Proc.new {"Sorry, that emoticon was not found"}) do |key, value|
     if english_emoticon == key
       return value 
     end 
