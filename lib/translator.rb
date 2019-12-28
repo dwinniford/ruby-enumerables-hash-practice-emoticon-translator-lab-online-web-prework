@@ -19,6 +19,7 @@ def get_japanese_emoticon(file, english_emoticon)
   new_emoticons = load_library(file)
   new_emoticons[:get_emoticon].find do |key, value|
     english_emoticon == key
+  end 
 end
 
 def get_english_meaning
